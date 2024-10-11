@@ -1,0 +1,29 @@
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+input {
+  width: 50%;
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 20px;
+  border: 1px solid red;
+  border-radius: 5px;
+  outline: none;
+}
+.pokemon-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pokemon-card {
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  border: 1px solid red;
+  border-radius: 5px;
+  text-transform: capitalize;
+  text-align: center;
+}
