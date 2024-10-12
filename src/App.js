@@ -39,13 +39,17 @@ const App = () => {
         onChange={(e) => setSearchPokemon(e.target.value)}
       />
       <div className="pokemon-container">
-        {filteredPokemon.map((poke) => (
-          <div key={poke.name} className="pokemon-card">
-            <img src={poke.image} alt={poke.name} />
-            <h2>{poke.name}</h2>
-            <p>Abilities: {poke.abilities}</p>
-          </div>
-        ))}
+        {filteredPokemon.length > 0 ? (
+          filteredPokemon.map((poke) => (
+            <div key={poke.name} className="pokemon-card">
+              <img src={poke.image} alt={poke.name} />
+              <h2>{poke.name}</h2>
+              <p>Abilities: {poke.abilities}</p>
+            </div>
+          ))
+        ) : (
+          <h1>Oppps... No Pokemon Found :{searchPokemon}</h1>
+        )}
       </div>
     </div>
   );
